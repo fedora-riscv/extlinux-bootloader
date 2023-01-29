@@ -1,6 +1,6 @@
 Name:           extlinux-bootloader
 Version:        1.2
-Release:        15%{?dist}
+Release:        15.rv64%{?dist}
 Summary:        The EXTLINUX bootloader framework, for booting the local system
 
 License:        GPLv2+
@@ -12,7 +12,7 @@ Requires:       grubby-deprecated
 %endif
 Provides:       syslinux-extlinux
 
-ExclusiveArch:  %{arm} aarch64
+ExclusiveArch:  %{arm} aarch64 riscv64
 
 %description
 The EXTLINUX bootloader framework, for booting the local system.
@@ -41,6 +41,9 @@ install -p %{SOURCE1} %{buildroot}%{_sbindir}/extlinux
 
 
 %changelog
+* Sun Jan 29 2023 Liu Yang <Yang.Liu.sn@gmail.com> - 1.2-15.rv64
+- Add riscv64 support.
+
 * Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.2-15
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 

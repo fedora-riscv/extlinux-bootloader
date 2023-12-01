@@ -7,7 +7,7 @@ License:        GPLv2+
 URL:            https://src.fedoraproject.org/rpms/extlinux-bootloader
 Source1:        extlinux.sh
 BuildRequires:  coreutils
-%if 0%{?fedora} > 29
+%if 0%{?fedora} > 29 && 0%{?fedora} < 37
 Requires:       grubby-deprecated
 %endif
 Provides:       syslinux-extlinux
